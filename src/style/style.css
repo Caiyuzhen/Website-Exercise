@@ -4,6 +4,12 @@ html, body {
 	cursor: none;
 }
 
+/* 内容与结构 */
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
 
 /* 鼠标样式相关 -------------------------------------------------- */
 .mouse-point {
