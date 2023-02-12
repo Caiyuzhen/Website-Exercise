@@ -1,0 +1,27 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	cursor: none;
+}
+
+
+/* 鼠标样式相关 -------------------------------------------------- */
+.mouse-point {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: #13005A;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+#myCanvas {
+	height: 100%;
+	width: 100%;
+	/* border: 10px solid #000; */
+	box-sizing: border-box;
+	position: fixed;  /*🔥因为 fixed 之后就脱离了文档流，就能直接覆盖整个页面了*/
+	top: 0;
+	left: 0;
+}
