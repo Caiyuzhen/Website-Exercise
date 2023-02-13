@@ -42,3 +42,38 @@
 	top: 0;
 	right: 0;
 }
+
+/* Portfolio */
+.info-header-nav-title {
+	font-size: 2rem;
+	font-weight: 200;
+}
+
+/* 徽章 badge */
+.info-header-nav-badge-box {
+	position: relative;
+	right: 0
+}
+
+.info-header-nav-badge-box > img {
+	width: 80px;
+}
+
+.circleBadgeNormal {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.circleBadgeHover {
+	position: absolute;
+	right: 0;
+	top: 0;
+	opacity: 0;
+	transition: opacity 0.3s;
+	/* z-index: 102; */
+}
+
+.circleBadgeHover:hover {
+	opacity: 1;
+}

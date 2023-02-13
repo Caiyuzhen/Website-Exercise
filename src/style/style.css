@@ -11,7 +11,7 @@ body {
 
 
 
-/* 鼠标样式相关 -------------------------------------------------- */
+/* Canvas 鼠标样式相关 -------------------------------------------------- */
 .mouse-point {
 	width: 8px;
 	height: 8px;
@@ -20,6 +20,8 @@ body {
 	position: fixed;
 	top: 0;
 	left: 0;
+	z-index: 101;
+	pointer-events: none; //🔥🔥🔥禁用上层 canvas 的事件!! 让小圆点的鼠标事件影响到下面的元素！！
 }
 
 #myCanvas {
@@ -30,4 +32,87 @@ body {
 	position: fixed;  /*🔥因为 fixed 之后就脱离了文档流，就能直接覆盖整个页面了*/
 	top: 0;
 	left: 0;
+	z-index: 100;
+	pointer-events: none; //🔥🔥🔥禁用上层 canvas 的事件!! 让小圆点的鼠标事件影响到下面的元素！！
 }
+
+.container {
+	border: 1px solid red;
+	padding: 20px;
+}
+
+/* 上下信息 */
+.info-header {
+	display: flex;
+	flex-direction: column;
+	gap: 100px
+}
+
+.info-header-nav {
+	display: flex;
+	justify-content: space-between;
+}
+
+.info-header-nav-badge {
+	display: flex;
+	gap: 12px;
+}
+
+.info-header-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.info-header-imgs {
+	position: relative;
+	border: 1px solid green;
+	width: fit-content;
+}
+
+.info-header-imgs-img {
+	width: 300px;
+	height: 300px;
+	background-color: lightgray;
+}
+
+.info-header-imgs-rotate {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+/* Portfolio */
+.info-header-nav-title {
+	font-size: 2rem;
+	font-weight: 200;
+}
+
+/* 徽章 badge */
+.info-header-nav-badge-box {
+	position: relative;
+	right: 0
+}
+
+.info-header-nav-badge-box > img {
+	width: 80px;
+}
+
+.circleBadgeNormal {
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.circleBadgeHover {
+	position: absolute;
+	right: 0;
+	top: 0;
+	opacity: 0;
+	transition: opacity 0.3s;
+}
+
+.circleBadgeHover:hover {
+	opacity: 1;
+}
+
+
