@@ -116,3 +116,13 @@ body {
 }
 
 
+/* 鼠标⭕️圆圈放大效果 _________ */
+/* 🔥🔥🔥同时具备两个类才生效！ 移入 circleBadgeNormal 后再添加这个 class！！*/
+.mouse-point.bigdot {
+	height: 28px;
+	width: 28px;
+	background-color: #7286D3;
+	transition: width 0.3s, height 0.3s; /* 宽高的过渡动画 */
+}
+
+

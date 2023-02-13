@@ -1,22 +1,21 @@
 // 鼠标效果
 export function cursorInit () {
-	// DOM 的内部小圆点
-	const centerDotDOM = $('.mouse-point')
-	// 计算一下元素的宽高
-	const centerDotWidth = centerDotDOM.width()
-	const centerDotHeight = centerDotDOM.height()
-	// 原生的话如何计算元素的宽高？
-	// getComputedStyle 或 getBoundingClientRect
-	
-	// 输出元素的宽度值，不包含边框占据的位置
-    // console.log(box.clientWidth);  ==>  输出 100 , 类型为number
- 
-    // 输出元素的宽度值，包含边框占据的位置
-    // console.log(box.offsetWidth);  ==>  输出 106 , 类型为number
- 
-    // 输出元素的宽度设置，不包含边框占据的位置
-    // console.log(getComputedStyle(box).width);  ==>  输出 100px , 类型为字符串
 
+	// 🔥🔥🔥 hover 后小圆点变大圆点 (先获取所有被打标记的元素)
+	const allDotHoverElements = $('div[data-bigdot="true"]')
+	// console.log(allDotHoverElements);
+	allDotHoverElements.hover(() => {
+		centerDotDOM.addClass('bigdot')
+		// console.log('移入元素了')
+	}, () => {
+		centerDotDOM.removeClass('bigdot')
+		// console.log('移出元素了')
+	})
+
+
+
+	// 🔥🔥DOM 的内部小圆点（上面在移入元素时添加类名）
+	const centerDotDOM = $('.mouse-point')
 
 	// canvas 的外环
 	paper.setup('myCanvas')
@@ -57,6 +56,11 @@ export function cursorInit () {
 
 		// 🔥更新圆形的位置
 		circle.position = new paper.Point(lastX, lastY)
+
+		// 计算一下小圆点元素的宽高 (🔥🔥🔥每次页面刷新后都要重新计算一下)
+		const centerDotWidth = centerDotDOM.width()
+		const centerDotHeight = centerDotDOM.height()
+		// 原生的话如何计算元素的宽高？ -- getComputedStyle 或 getBoundingClientRect
 
 		// 更改中心小圆点
 		centerDotDOM.css(
