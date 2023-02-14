@@ -1,13 +1,11 @@
 // 引入图片
-let circleBadgeNormal = './imgs/cssda-special-kudos-black.png'
-let circleBadgeHover = './imgs/cssda-special-kudos-purple.png'
-import bigTitle from "../views/bigTitle.js" //🔥路径需要从最外侧调用！
+const circleBadgeNormal = './imgs/cssda-special-kudos-normal.png' //🔥路径需要从最外侧调用！
+const circleBadgeHover = './imgs/cssda-special-kudos-hover.png' //🔥路径需要从最外侧调用！
 
-// 顶部信息 View
-const baseInfoTemp = `
-	<div class="container">
-		<div class="info-header">
-			<div class="info-header-nav">
+
+
+const temp = `
+	<div class="info-header-nav">
 				<span class="info-header-nav-title">Portfolio</span>
 				<div class="info-header-nav-badge">
 
@@ -37,25 +35,8 @@ const baseInfoTemp = `
 					</div>
 				</div>
 			</div>
-
-			<!-- 大标题文字组件 -->
-			${bigTitle()}
-			
-			
-			<div class="info-header-imgs">
-				<div class="info-header-imgs-img">Image</div>
-				<span class="info-header-imgs-rotate">Rotate</span>
-			</div>
-		</div>
-
-		<div class="part2"></div>
-		<div class="part3"></div>
-	</div>
-
 `
 
-
-
-export default function baseInfoView() {
-	return baseInfoTemp;
+export default function headerAction() {
+	return temp
 }

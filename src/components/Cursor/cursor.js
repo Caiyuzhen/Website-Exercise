@@ -21,7 +21,7 @@ export function cursorInit () {
 	paper.setup('myCanvas')
 	const circle = new paper.Path.Circle(new paper.Point(300, 300), 24)
 	circle.strokeColor = '#7286D3'
-	circle.strokeWidth = 3
+	circle.strokeWidth = 2
 
 
 	const tool = new paper.Tool()
@@ -65,7 +65,7 @@ export function cursorInit () {
 		// 更改中心小圆点
 		centerDotDOM.css(
 			'transform',
-			// 🔥 还要偏移一点点, 让鼠标的头就是小圆点的中心
+			// 🔥 还要偏移一点点, 让鼠标的头就 = 小圆点的中心
 			`translateX(${mouseMoveX - centerDotWidth / 2}px) translateY(${mouseMoveY - centerDotHeight / 2}px)`
 		)
 	}

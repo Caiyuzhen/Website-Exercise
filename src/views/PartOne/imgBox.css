@@ -1,0 +1,84 @@
+.info-header-imgs {
+	position: relative;
+	border: 3px solid #000000;
+	width: fit-content;
+}
+
+/* 🔥用上层的盒子控制内部图片的显示范围 */
+.info-header-imgs-box {
+	width: 600px;
+	height: 400px;
+	overflow: hidden; /* ⚡️图片裁切 */
+	position: relative; /* ⚡️图片裁切 */
+	display: flex;
+	justify-content: center;
+	align-items: start;
+}
+
+.show-avatar {
+	opacity: 1;
+	z-index: 2;
+	transition: opacity 0.8s ease;
+}
+
+/* 🔥🔥🔥在父元素是 hover 状态时, 去改变子元素的样式 */
+.info-header-imgs-box:hover > .show-avatar {/* 🔥🔥 '>' 用于选择直接子元素 */
+	opacity: 0;
+}
+
+.info-header-imgs-box > img {
+	position: absolute; /* ⚡️图片裁切 */
+	width: 600px;
+	transform: translateY(-120px);
+}
+
+.info-header-imgs-rotate {
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+
+
+
+/* 旋转的元素 */
+.info-header-imgs-rotate {
+	width: 100px;
+	height: 100px;
+	position: absolute; /* ⚡️让子元素叠加在父元素的中心 */
+	display: flex; /* ⚡️让子元素叠加在父元素的中心 */
+	justify-content: center; /* ⚡️让子元素叠加在父元素的中心 */
+	align-items: center; /* ⚡️让子元素叠加在父元素的中心 */
+	top: 0;
+	right: 0;
+	z-index: 2;
+	transform: translate(50%, -50%);
+}
+
+.info-header-imgs-rotate > img {
+	position: absolute; /* ⚡️让子元素叠加在父元素的中心 */
+}
+
+.arrow-icon {
+	width: 24px;
+	height: 24px;
+	transform: rotate(15deg);
+}
+
+.circle-text {
+	animation: circleTextAnim 20s infinite linear;/* 🔥🔥🔥添加帧动画 */
+}
+
+.circle-text:hover { /* ⚡️鼠标移入就暂停旋转 */
+	animation-play-state: paused;
+}
+
+/* 帧动画 */
+@keyframes circleTextAnim {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

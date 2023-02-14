@@ -45,7 +45,7 @@ body {
 .info-header {
 	display: flex;
 	flex-direction: column;
-	gap: 100px
+	gap: 100px; /* 子组件还会覆盖这个值！ */
 }
 
 .info-header-nav {

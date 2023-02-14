@@ -1,0 +1,17 @@
+.container {
+	/* border: 1px solid red; */
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: space-between;
+	padding: 48px;
+	gap: 200px;
+}
+
+/* 上下信息 */
+.info-header {
+	display: flex;
+	flex-direction: column;
+	gap: 72px
+}

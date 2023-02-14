@@ -1,0 +1,47 @@
+/* Selected Work 标题 */
+.selected-works {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 60px;
+	/* border: 1px solid red; */
+}
+
+
+/* 目录(🔥用伪元素实现目录的继承！） */
+.works-text-container {
+	font-weight: 200;
+	display: flex;
+	flex-direction: column;
+	gap: 24px;
+	overflow-x: hidden;
+}
+
+.all-work {
+	counter-increment: workNum; /*  🔥🔥计数器, 类似变量！ 这个变量要放在所有目录都有的 class 的那个元素身上！！结合下边 content 统一来统计数量！！*/
+	font-size: 2.5rem;
+	/* border: 1px solid red; */
+}
+
+.left-titles-info::before {
+	content: "0" counter(workNum)"/"; /* 🔥🔥需要为字符串！结合上边的 counter-increment 变量！ */
+	font-size: 1.2rem;
+	font-weight: 100;
+	margin-right: 8px;
+}
+
+
+/* 跑马灯文字 */
+.right-run-info {
+	font-size: 3.5rem;
+	position: absolute;
+	right: 0;
+	white-space: norwrap;/* 禁止换行 */
+	opacity: 0.2;
+	transform: translateX(100%);
+}
+
+.all-work:hover > .right-run-info{ /* 🔥 hover 目录时, 跑马灯文字进行位移 */
+	transform: translateX(-100%);
+	transition: transform 0.5s;
+}
