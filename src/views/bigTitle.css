@@ -1,0 +1,47 @@
+.info-header-detail {
+	font-size: 5rem;
+	font-weight: 200;
+	display: flex;
+	flex-direction: column;
+}
+
+/* 🌟 小标题*/
+.info-header-more {
+	font-size: 1.25rem;
+	font-weight: 200;
+	position: relative;
+	width: fit-content;/* 🔥适应内容的宽度！！ */
+	padding-right: 32px; /*🔥把容器撑宽, 相当于把底部的下划线也撑宽了！！*/
+	overflow-x: hidden;
+	/* border: 1px solid red; */
+}
+
+/* 🔥小标题的下划线 */
+.info-header-more::before {
+	content: " ";/*先加个空字符！*/
+	width: 100%;
+	height: 2px;
+	background-color: black;
+	position: absolute;
+	bottom: -1px;
+	transition: transform 0.3s ease-in-out;
+}
+
+
+/* 🔥小标题的 hover 效果 */
+.info-header-more:hover::before {
+	transform: translateX(100%); /*⚡️⚡️⚡️小元素移走！*/
+}
+
+
+/* 🔥右侧的小 icon */
+.info-header-more::after {
+	content: " ";/*先加个空字符！*/
+	width: 18px;
+	height: 18px;
+	background-image: url('../imgs/arrow.svg');
+	position: absolute;
+	background-repeat: no-repeat;
+	transform: translate(12px, 2px) ;
+}
+

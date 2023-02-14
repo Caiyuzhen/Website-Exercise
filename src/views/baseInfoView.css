@@ -1,5 +1,5 @@
 .container {
-	border: 1px solid red;
+	/* border: 1px solid red; */
 	padding: 20px;
 }
 
@@ -7,7 +7,7 @@
 .info-header {
 	display: flex;
 	flex-direction: column;
-	gap: 100px
+	gap: 24px
 }
 
 .info-header-nav {
@@ -15,9 +15,17 @@
 	justify-content: space-between;
 }
 
+.info-header {
+	/* border: 1px solid red; */
+}
+
+
+/* 右上角一块信息 */
 .info-header-nav-badge {
+	position: relative;
 	display: flex;
-	gap: 12px;
+	gap: 48px;
+	/* border: 1px solid red; */
 }
 
 .info-header-text {
@@ -98,6 +106,7 @@
 	height: 0;
 	width: 0;
 	opacity: 0;
+	/* position: absolute; */
 }
 
 .switch-bar {
