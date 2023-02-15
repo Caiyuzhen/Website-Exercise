@@ -19,11 +19,19 @@
 
 .all-work {
 	counter-increment: workNum; /*  🔥🔥计数器, 类似变量！ 这个变量要放在所有目录都有的 class 的那个元素身上！！结合下边 content 统一来统计数量！！*/
-	font-size: 2.5rem;
+	position: relative;
+	/* overflow: hidden; */
 	/* border: 1px solid red; */
 }
 
-.left-titles-info::before {
+/* 左侧标题 */
+.left-work-titles-info {
+	font-size: 3.5rem;
+	font-weight: 200;
+	transition: opacity 0.3s;
+}
+
+.left-work-titles-info::before {
 	content: "0" counter(workNum)"/"; /* 🔥🔥需要为字符串！结合上边的 counter-increment 变量！ */
 	font-size: 1.2rem;
 	font-weight: 100;
@@ -32,16 +40,50 @@
 
 
 /* 跑马灯文字 */
-.right-run-info {
+.text-moving {
+	z-index: 5;
 	font-size: 3.5rem;
 	position: absolute;
 	right: 0;
 	white-space: norwrap;/* 禁止换行 */
 	opacity: 0.2;
 	transform: translateX(100%);
+	animation: textMoving 5s linear infinite;
+	animation-play-state: paused;
 }
 
-.all-work:hover > .right-run-info{ /* 🔥 hover 目录时, 跑马灯文字进行位移 */
-	transform: translateX(-100%);
-	transition: transform 0.5s;
+
+.left-work-titles-info:hover { 
+	opacity: 0;
+}
+
+.left-work-titles-info:hover + .text-moving { /* 🔥 hover 目录时, 跑马灯文字进行位移, 兄弟选择器！！ */
+	animation-play-state: running; /* 🔥 hover 就播放动画！ */
+}
+
+
+/* 🔥🔥🔥 因为需要让跑马灯文字去循环动！ */
+@keyframes textMoving {
+	from {
+		transform: translateX(100%);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+
+
+/* 圆形图片 */
+.circle-img-container {
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+	overflow: hidden;
+	position: absolute;/* 🔥绝对定位才能跟随鼠标, 控制父元素 */
+	opacity: 0;
+}
+
+.circle-img-container > img {
+	width: 160%; /* 🔥放大图片 */
 }

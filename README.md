@@ -1,3 +1,7 @@
 # 核心依赖
-- Paper.js
-- JQuery.js
+- Canvas:
+  - Paper.js
+- DOM:
+  - JQuery.js
+- Animation:
+  - GSAP
