@@ -1,4 +1,8 @@
 const circleImg_01 = './imgs/project_01.jpg'
+const circleImg_02 = './imgs/project_02.jpg'
+const circleImg_03 = './imgs/project_03.jpg'
+const circleImg_04 = './imgs/project_04.jpg'
+const circleImg_05 = './imgs/project_05.jpg'
 // console.log(gsap)
 
 
@@ -89,7 +93,7 @@ const selectWorktemp = `
 
 				<!-- 图片 -->
 				<div class="circle-img-container">
-					<img src="${circleImg_01}" alt="">
+					<img src="${circleImg_02}" alt="">
 				</div>
 			</div>
 
@@ -107,7 +111,7 @@ const selectWorktemp = `
 
 				<!-- 图片 -->
 				<div class="circle-img-container">
-					<img src="${circleImg_01}" alt="">
+					<img src="${circleImg_03}" alt="">
 				</div>
 			</div>
 
@@ -125,7 +129,7 @@ const selectWorktemp = `
 
 				<!-- 图片 -->
 				<div class="circle-img-container">
-					<img src="${circleImg_01}" alt="">
+					<img src="${circleImg_04}" alt="">
 				</div>
 			</div>
 
@@ -143,7 +147,7 @@ const selectWorktemp = `
 
 				<!-- 图片 -->
 				<div class="circle-img-container">
-					<img src="${circleImg_01}" alt="">
+					<img src="${circleImg_05}" alt="">
 				</div>
 			</div>
 			
