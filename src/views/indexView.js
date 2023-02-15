@@ -7,6 +7,7 @@ import selectedWork from './PartTwo/selectedWork.js'
 // 顶部信息 View
 const indexViewTemp = `
 	<div class="container">
+		<!-- 顶部信息 -->
 		<div class="info-header">
 			<!-- 右侧按钮 -->
 			${headerAction()}
@@ -19,6 +20,7 @@ const indexViewTemp = `
 			
 		</div>
 
+		<!-- 项目列表 -->
 		${selectedWork()}
 		<div class="part3"></div>
 	</div>
