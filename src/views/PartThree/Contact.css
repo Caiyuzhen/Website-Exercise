@@ -1,0 +1,67 @@
+.footer {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 48px;
+	/* border: 1px solid red; */
+}
+
+.footer-title {
+	font-size: 2rem;
+	font-weight: 100;	
+}
+
+.footer-info {
+	width: 100%;
+	display: flex;
+	justofy-content: space-between;
+	/* border: 1px solid red; */
+}
+
+.footer-info-left {
+	width: 100%;
+	display: flex;
+	gap:6px;
+	flex-direction: column;
+}
+
+/* 选择第 2、3 个子元素 */
+.footer-info-left > :nth-child(2),
+.footer-info-left > :nth-child(3) {
+	position: relative;
+	width: fit-content; /* 🔥 宽度 = 内容宽度 */
+	overflow-x: hidden; /* 🔥是在上一层去隐藏！ */
+}
+
+/* 给第 2、3 个子元素底部加条线 */
+.footer-info-left > :nth-child(2)::before,
+.footer-info-left > :nth-child(3)::before {
+	content: '';
+	height: 1px;
+	width: 100%;
+	background-color: black;
+	position: absolute;
+	bottom: -1px;
+	transform: translateX(-100%)/* 先移出去, hover 再移进来 */
+	transition: transform 0.3s ease;
+}
+
+/* 第 2、3 个子元素的 hover 效果 */
+.footer-info-left > :nth-child(2):hover::before, /* 🔥hover 放前面, 表示 XX 元素被悬浮时，它的伪元素怎么样 */
+.footer-info-left > :nth-child(3):hover::before {
+	transform: translateX(0)/* 先移出去, hover 再移进来 */
+}
+
+.footer-info-right {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap:6px;
+	align-items: flex-end;
+}
+
+.font-info-talk {
+	font-size: 6rem;
+	font-weight: 100;
+	text-transform: uppercase;
+}

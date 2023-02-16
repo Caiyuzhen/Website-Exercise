@@ -2,6 +2,7 @@ import headerAction from "./PartOne/headerAction.js" //🔥路径需要从最外
 import bigTitle from "./PartOne/bigTitle.js" //🔥路径需要从最外侧调用！
 import imgBoxs from "./PartOne/imgBox.js" //🔥路径需要从最外侧调用！
 import selectedWork from './PartTwo/selectedWork.js'
+import Contact from './PartThree/Contact.js'
 
 
 // 顶部信息 View
@@ -23,6 +24,9 @@ const indexViewTemp = `
 		<!-- 项目列表 -->
 		${selectedWork()}
 		<div class="part3"></div>
+
+		<!-- 底部信息 -->
+		${Contact()}
 	</div>
 
 `
