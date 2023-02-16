@@ -1,11 +1,69 @@
-const circleImg_01 = './imgs/project_01.jpg'
-const circleImg_02 = './imgs/project_02.jpg'
-const circleImg_03 = './imgs/project_03.jpg'
-const circleImg_04 = './imgs/project_04.jpg'
-const circleImg_05 = './imgs/project_05.jpg'
+// const circleImg_01 = './imgs/project_01.jpg'
+// const circleImg_02 = './imgs/project_02.jpg'
+// const circleImg_03 = './imgs/project_03.jpg'
+// const circleImg_04 = './imgs/project_04.jpg'
+// const circleImg_05 = './imgs/project_05.jpg'
 // console.log(gsap)
+import WorkList from '../../components/WorkList/workList.js'
 
 
+// 🔥数据(配置数据就能控制视图！)
+const worksData = [
+	{
+	  title: 'Recongroup',
+	  subTitle: 'Corporate Design / Webdesign & Development',
+	  imgUrl: './imgs/project_01.jpg'
+	},
+	{
+	  title: 'Glassland',
+	  subTitle: 'Webdesign & Development',
+	  imgUrl: './imgs/project_02.jpg'
+	},
+	{
+	  title: 'PEFC',
+	  subTitle: 'Graphic Design / Animations / SM',
+	  imgUrl: './imgs/project_03.jpg'
+	},
+	{
+	  title: 'Biosphere Lab Lungau',
+	  subTitle: 'Corporate Design / Webdesign & Development / Social Media / Newsletter',
+	  imgUrl: './imgs/project_04.jpg'
+	},
+	{
+	  title: 'ZIID',
+	  subTitle: 'Corporate Design / Webdesign / Graphic Design / Newsletter ',
+	  imgUrl: './imgs/project_05.jpg'
+	},
+	{
+	  title: 'Hotel Gambswirt',
+	  subTitle: 'Webdesign / Social Media / Photography',
+	  imgUrl: './imgs/project_06.jpg'
+	},
+	{
+	  title: 'More works',
+	  subTitle: 'More works & photography',
+	  imgUrl: './imgs/project_07.jpg'
+	},
+  ]
+
+
+
+//渲染 DOM ————————————————————————————————————————————————————————————————————————
+const selectWorktemp = `	
+	<!-- 项目列表 -->
+	<div class="selected-works">
+		<span>SELECTED WORKS</span>
+		<div class="works-text-container">
+			<!-- 🔥🔥调用 init 这个【原型方法】并【传入数据】来动态的生成 DOM !!!-->
+			${
+				// 🔥🔥等文档加载完毕, DOM 渲染完后后再执行, 不然 WorkList 里边取不到 .works-text-container 这个元素！！！
+				document.addEventListener('DOMContentLoaded', function() {
+					WorkList.init(worksData)
+				})
+			}
+		</div>
+	</div>
+`
 
 
 
@@ -52,108 +110,6 @@ const circleImg_05 = './imgs/project_05.jpg'
 	
 // })
 
-
-
-//渲染 DOM ————————————————————————————————————————————————————————————————————————
-const selectWorktemp = `
-	<!-- 项目列表 -->
-	<div class="selected-works">
-		<span>SELECTED WORKS</span>
-		<div class="works-text-container">
-
-			<!-- 01 -->
-			<div class="all-work">
-				
-				<div class="all-work-text-box"> <!-- 这一层用来裁切元素 -->
-					<!-- 左侧主目录, 🌟🌟数字在 css 内的【伪元素】去自动生成！！ -->
-					<span class="left-work-titles-info">Recon Group</span>
-
-					<!-- 跑马灯文字 -->
-					<span class="text-move">Corporate Design / Web Design Development</span>
-				</div>
-
-
-				<!-- 图片 -->
-				<div class="circle-img-container">
-					<img src="${circleImg_01}" alt="">
-				</div>
-			</div>
-
-
-			<!-- 02 -->
-			<div class="all-work">
-				
-				<div class="all-work-text-box"> <!-- 这一层用来裁切元素 -->
-					<!-- 左侧主目录, 🌟🌟数字在 css 内的【伪元素】去自动生成！！ -->
-					<span class="left-work-titles-info">Glassland</span>
-
-					<!-- 跑马灯文字 -->
-					<span class="text-move">Corporate Design / Web Design Development</span>
-				</div>
-
-				<!-- 图片 -->
-				<div class="circle-img-container">
-					<img src="${circleImg_02}" alt="">
-				</div>
-			</div>
-
-
-			<!-- 03 -->
-			<div class="all-work">
-				
-				<div class="all-work-text-box"> <!-- 这一层用来裁切元素 -->
-					<!-- 左侧主目录, 🌟🌟数字在 css 内的【伪元素】去自动生成！！ -->
-					<span class="left-work-titles-info">PEFC</span>
-
-					<!-- 跑马灯文字 -->
-					<span class="text-move">Corporate Design / Web Design Development</span>
-				</div>
-
-				<!-- 图片 -->
-				<div class="circle-img-container">
-					<img src="${circleImg_03}" alt="">
-				</div>
-			</div>
-
-
-			<!-- 04 -->
-			<div class="all-work">
-				
-				<div class="all-work-text-box"> <!-- 这一层用来裁切元素 -->
-					<!-- 左侧主目录, 🌟🌟数字在 css 内的【伪元素】去自动生成！！ -->
-					<span class="left-work-titles-info">Bioshpere Lab Lungau</span>
-
-					<!-- 跑马灯文字 -->
-					<span class="text-move">Corporate Design / Web Design Development</span>
-				</div>
-
-				<!-- 图片 -->
-				<div class="circle-img-container">
-					<img src="${circleImg_04}" alt="">
-				</div>
-			</div>
-
-
-			<!-- 05 -->
-			<div class="all-work">
-				
-				<div class="all-work-text-box"> <!-- 这一层用来裁切元素 -->
-					<!-- 左侧主目录, 🌟🌟数字在 css 内的【伪元素】去自动生成！！ -->
-					<span class="left-work-titles-info">ZIID</span>
-
-					<!-- 跑马灯文字 -->
-					<span class="text-move">Corporate Design / Web Design Development</span>
-				</div>
-
-				<!-- 图片 -->
-				<div class="circle-img-container">
-					<img src="${circleImg_05}" alt="">
-				</div>
-			</div>
-			
-		</div>
-	</div>
-`
 
 
 
