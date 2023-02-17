@@ -26,30 +26,30 @@
 }
 
 /* 选择第 2、3 个子元素 */
-.footer-info-left > :nth-child(2),
+.footer-info-left > :nth-child(2), /* 跟 > : 之间要有空格！ */
 .footer-info-left > :nth-child(3) {
 	position: relative;
 	width: fit-content; /* 🔥 宽度 = 内容宽度 */
-	overflow-x: hidden; /* 🔥是在上一层去隐藏！ */
+	overflow-x: hidden; 🔥是在上一层去隐藏！
 }
 
 /* 给第 2、3 个子元素底部加条线 */
 .footer-info-left > :nth-child(2)::before,
 .footer-info-left > :nth-child(3)::before {
 	content: '';
-	height: 1px;
+	height: 2px;
 	width: 100%;
 	background-color: black;
 	position: absolute;
 	bottom: -1px;
-	transform: translateX(-100%)/* 先移出去, hover 再移进来 */
+	transform: translateX(-100%);/* 先移出去, hover 再移进来 */
 	transition: transform 0.3s ease;
 }
 
 /* 第 2、3 个子元素的 hover 效果 */
-.footer-info-left > :nth-child(2):hover::before, /* 🔥hover 放前面, 表示 XX 元素被悬浮时，它的伪元素怎么样 */
+.footer-info-left > :nth-child(2):hover::before, /* 🔥hover 放前面, 表示 XX 元素被悬浮时，它的伪元素会怎么样 */
 .footer-info-left > :nth-child(3):hover::before {
-	transform: translateX(0)/* 先移出去, hover 再移进来 */
+	transform: translateX(0);/* 先移出去, hover 再移进来 */
 }
 
 .footer-info-right {
@@ -58,6 +58,44 @@
 	flex-direction: column;
 	gap:6px;
 	align-items: flex-end;
+	position: relative;
+}
+
+.footer-info-right-box {
+	display: flex;
+	gap: 8px;
+	align-items: center;
+}
+
+.footer-info-right-box :first-child {  /* 跟 : 之间要有空格！ */
+	font-weight: 500;
+}
+
+
+.footer-info-right-icon {
+	display: inline;
+	width: 16px;
+	height: 16px;
+	background-image: url('../../imgs/close.svg');
+	background-repeat: no-repeat; /* 不重复 */
+}
+
+video {
+	position: absolute;
+	top: 0;
+	transform: translateY(-104%);/* 👈根据自身的高度向上移动 100% */
+	width: 300px;
+	/* visibility:none;  display:none; 会影响性能，会重绘！！因为是物理上的消失！ */
+	/* visibility: hidden; hidden 后相当于没这个元素了, 就不会有热区！！如果用 opacity 的话父级的热区就包括它！！但是 visibility 就没有过渡期效果, 非要用 opacity 的话就需要加个 point-event: none;! */
+	opacity: 0;
+	point-event: none;
+	transition: opacity 0.2s ease-in;
+}
+
+/* hover 后显示视频 */
+.footer-info-right-box:hover ~ video {
+	/* visibility: visible !important; */
+	opacity: 1 !important;
 }
 
 .font-info-talk {

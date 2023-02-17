@@ -8,7 +8,8 @@ export default class WorkList {
 
 	//动态的生成 html DOM
 	createWorkDOM (workData) {//🔥原型方法
-		const htmlText = `<div class="all-work">
+		const htmlText = `
+		<div class="all-work">
 					
 			<div class="all-work-text-box"> <!-- 这一层用来裁切元素 -->
 				<!-- 左侧主目录, 🌟🌟数字在 css 内的【伪元素】去自动生成！！ -->
