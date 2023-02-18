@@ -10,7 +10,7 @@ import {changeVideo} from './PartThree/Contact.js'
 // 顶部信息 View
 const indexViewTemp = `
  	<!-- 加载页 -->
-	${PageInitLoad()}
+	<!-- ${PageInitLoad()} -->
 	
 	<div class="container">
 		<!-- 顶部信息 /* 🔥 init-Ref 渐入效果 */ -->

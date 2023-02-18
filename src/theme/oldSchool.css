@@ -1,0 +1,85 @@
+/* 🔥🔥🔥在点击事件后, 【统一把 .old-school 这个类】加在 body 标签上, 🔥🔥🔥然后通过后【代选择器】去修改样式！ */
+.old-school {
+	background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+
+
+/* 🔥标题 Protfolio */
+.old-school .info-header-nav-title-box { /* 🔥🔥后代选择器 */
+	font-family: 'Impact';
+	background: linear-gradient(120deg, #5400a2 0%, #ff2492 100%);
+	background-clip: text;/* 🔥🔥🔥🔥只让文字进行剪切!!! (部分浏览器会生效） */
+	-webkit-background-clip: text; /* 🔥🔥🔥只让文字进行剪切!!! (Chrome 内会生效） */
+	color: transparent; /* 🔥让文字变透明 */
+	transform: scale(0.9, 1.65) rotate(-3deg) skewY(-3deg) translateY(28px) translateZ(0);
+}
+
+/* 【box 的伪元素】字体底部投影！！ */
+.old-school .info-header-nav-title-box::after {
+	content: 'Protfolio';
+	position: absolute;
+	top: 0.2px;
+	left: 3px;
+	text-shadow: 0.01em 0.06em #ffffff;
+	z-index: -2;
+}
+
+/* 🔥【box 的子元素】顶层 Portfolio 颜色 , 是 box 的子元素, 🔥🔥元素的【伪元素】跟元素内部的【子元素】是平级的，可以调整上下层的显示关系！！！ */
+.old-school .info-header-nav-title {
+	font-family: inherit;
+	background: inherit;
+	background-clip: inherit;
+	-webkit-background-clip: inherit; 
+	color: inherit; /* 🔥🔥🔥继承父级！！！ */
+	z-index: 10;
+}
+
+.old-school .info-header-detail {
+	font-family: 'Comic Sans MS';
+}
+
+.old-school .info-header-more {
+	font-family: 'Comic Sans MS';
+}
+
+.old-school .info-header-nav-badge-switch-info {
+	font-family: 'Comic Sans MS';
+}
+
+.old-school .left-work-titles-info {
+	font-family: 'Comic Sans MS';
+}
+
+.old-school .footer-title {
+	font-family: 'Comic Sans MS';
+}
+
+.old-school .footer-info-left {
+	font-family: 'Comic Sans MS';
+}
+
+.old-school .footer-info-right {
+	font-family: 'Comic Sans MS';
+}
+
+.old-school .font-info-talk {
+	font-family: 'Comic Sans MS';
+}
+
+
+/* 🔥改变鼠标样式 */
+.old-school canvas {
+	opacity: 0;
+}
+
+.old-school .mouse-point {
+	width: 30px;
+	height: 28px;
+	background-image: url('../imgs/cursor.svg');
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-size: containl;
+	top: 10px;
+	left: 6px;
+	border-radius: 0%;
+}

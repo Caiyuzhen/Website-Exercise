@@ -6,7 +6,9 @@ const circleBadgeHover = './imgs/cssda-special-kudos-hover.png' //🔥路径需�
 
 const temp = `
 	<div class="info-header-nav">
-		<span class="info-header-nav-title">Portfolio</span>
+			<span class="info-header-nav-title-box">
+				<span class="info-header-nav-title">Portfolio</span>
+			</span>
 		<div class="info-header-nav-badge">
 
 			<!-- 🔥🔥🔥打标记的思路: 只要有 data-bigdot="true" 这个属性的元素 hover 上去后都会改变 Point 的样式！-->
