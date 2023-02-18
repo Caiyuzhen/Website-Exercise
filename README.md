@@ -5,3 +5,4 @@
   - JQuery.js
 - Animation:
   - GSAP
+  - AnimateCSS

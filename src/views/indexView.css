@@ -16,3 +16,9 @@
 	flex-direction: column;
 	gap: 72px
 }
+
+/* 🔥渐入效果 */
+.init-Ref {
+	opacity: 0;
+	transition: transform 0.35s cubic-bezier(.77, 0, .175, 1) 1.5s;
+}

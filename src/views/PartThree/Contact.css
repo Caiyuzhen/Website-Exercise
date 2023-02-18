@@ -30,7 +30,7 @@
 .footer-info-left > :nth-child(3) {
 	position: relative;
 	width: fit-content; /* 🔥 宽度 = 内容宽度 */
-	overflow-x: hidden; 🔥是在上一层去隐藏！
+	overflow-x: hidden; /* 🔥是在上一层去隐藏！ */
 }
 
 /* 给第 2、3 个子元素底部加条线 */
@@ -80,6 +80,30 @@
 	background-repeat: no-repeat; /* 不重复 */
 }
 
+/* 切换 icon, 点击后通过 JS 给这个容器加多一个 .ticked 类！! */
+.ticked .footer-info-right-icon { /* ⚡️⚡️表示父节点有 .ticked 类, 子节点有 .footer-info-right-icon 类！！ */
+	background-image: url('../../imgs/play.svg');
+	box-sizing: border-box; /* 🔥盒模型, 可以把图标强行缩小一点 */
+	background-clip: content-box; /* 🔥 让 icon 只显示在内容 box 区域内, 可以把图标强行缩小一点 */
+	padding: 2px; /* 🔥缩小 icon！！ */
+	/* 👇背景图起作用的范围: */
+	/* 
+		box-sizing 和 background-clip 都是 CSS 盒模型的属性。
+
+		
+		box-sizing 属性用来控制盒模型的计算方式，可以有以下两个值：
+				content-box：默认值，指定元素的宽度和高度不包括边框和内边距，只包括内容。
+				border-box：指定元素的宽度和高度包括边框和内边距，不包括外边距。
+
+
+		background-clip 属性用来控制元素的背景图片裁剪方式，可以有以下三个值：
+				border-box：默认值，背景会延伸到边框外部。
+				padding-box：背景会延伸到内边距区域，但不包括边框。
+				content-box：背景会被裁剪在内容区域内，不包括边框和内边距。
+	*/
+}
+
+
 video {
 	position: absolute;
 	top: 0;
@@ -99,7 +123,47 @@ video {
 }
 
 .font-info-talk {
+	display: flex;
 	font-size: 6rem;
 	font-weight: 100;
 	text-transform: uppercase;
+	position: relative;
+	overflow-x: hidden;
+	/* width: fit-content; */
+}
+
+/* 右侧大箭头 */
+.font-info-talk::after {
+	content: '';
+	height:60px;
+	width: 60px;
+	background-image: url('/src/imgs/arrow.svg'); /* 🔥这里的路径是相对于 index.html 的路径！！因为最终是通过模板字符串渲染出来的！ */
+	background-repeat: no-repeat;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translate(-8px, 8px);
+	transition: transform 0.35s ease-in;
+}
+
+/* Let's Talk 大标题底部的线 */
+.font-info-talk::before {
+	content: '';
+	height: 2px;
+	width: 100%;
+	position: absolute;
+	background-color: black;
+	bottom: 8px;
+	transform: translateX(-100%);/* 先移出去, hover 再移进来 */
+	transition: transform 0.35s ease-in;
+}
+
+/* 大标题线的移动 */
+.font-info-talk:hover::before {
+	transform: translateX(0);/* 先移出去, hover 再移进来 */
+}
+
+/* 右侧箭头的移动 */
+.font-info-talk:hover::after {
+	transform: translate(0px, 0px);
 }

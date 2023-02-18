@@ -2,6 +2,9 @@ html, body {
 	margin: 0;
 	padding: 0;
 	cursor: none;
+	/* 定义全局颜色变量 */
+	--color-T: #b1d372;
+	--color-B: #7286D3;
 }
 
 /* 内容与结构 */
