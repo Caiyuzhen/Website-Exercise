@@ -83,3 +83,7 @@
 	left: 6px;
 	border-radius: 0%;
 }
+
+.old-school .mouse-point.bigdot { /* 👈👈空格表示层级关系,  */
+	background-image: url('../imgs/cursor-hover.svg');
+}

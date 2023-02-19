@@ -1,5 +1,6 @@
 .info-header-detail {
-	font-size: 5rem;
+	/* font-size: 5rem; */ /* rem 就是相对于根元素字体大小的 5 倍, 一般是 16px, 所以 5rem = 5 X 16px = 80px */
+	font-size: 5vw;  /* 把视口分为 100 份, 每个字占据 5 分的宽度 */
 	font-weight: 200;
 	display: flex;
 	flex-direction: column;

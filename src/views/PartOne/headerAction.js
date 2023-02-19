@@ -3,6 +3,19 @@ const circleBadgeNormal = './imgs/cssda-special-kudos-normal.png' //🔥路径�
 const circleBadgeHover = './imgs/cssda-special-kudos-hover.png' //🔥路径需要从最外侧调用！
 
 
+// 切换主题（切换按钮样式用 CSS 写的, 事件则是加上 .old-school 类名便可以切换）
+// 🔥🔥需要等元素加载完毕后才能绑定事件！
+document.addEventListener('DOMContentLoaded', () => {
+	$('.info-header-nav-badge-switch').click((e) => {
+		// console.log(e.target)
+		// 切换主题, 由于jQuery 的 bug, label 内会事件冒泡执行两次, 所以加上判断, 只有点击的不是 label 内的元素才会执行切换主题的操作！!
+		if(!e.target.classList.contains('checkBoxSwitch')) {
+			$('body').toggleClass('old-school')
+		}
+	})
+})
+
+	
 
 const temp = `
 	<div class="info-header-nav">

@@ -132,8 +132,10 @@
 	flex-direction: column;
 	font-size: 0.7rem;
 	align-items: center;
+	justify-content: center;
 	height: 60px;
 	color: #65647C;
+	text-align: top;
 	/* border: 1px solid red; */
 }
 
@@ -145,4 +147,53 @@
 
 .switch-to-new {
 	visibility: hidden;/*🔥🔥隐藏元素*/
+}
+
+
+/* 媒体查询响应式 (🔥部分覆盖而非完全覆盖！) */
+/* 
+	逻辑分辨率，系统可以以多少分辨率的像素来渲染
+	物理分辨率 PPI 
+
+	320px ~ 480px : 移动设备
+	480px ~ 768px : ipad、平板电脑
+	768px ~ 1024px : 小屏电脑、笔记本电脑
+	1024px ~ 1280px : 大屏电脑、台式机
+	1280px 以上 : 超大屏电脑、电视
+ */
+@media (min-width: 200px) and (max-width: 900px) { /* max-width 是小于 900px 就怎么样, min-width 900px 是大于 900 就怎么样 */
+	.info-header-nav-badge-box > img {
+		width: 68px;
+	}
+
+	.info-header-nav-badge-switch {
+		height: 40px;
+	}
+
+	.switch-bar {
+		width: 60px;
+		heightL 28px;
+	}
+
+	.checkBoxSwitch:checked  + .switch-bar::before  { /*🔥🔥🔥改变的是 【相邻的元素】的伪元素！ */
+		transform: translate(26px) !important;
+	}
+
+	.info-header-nav-badge-switch-info {
+		font-zize: 0.5rem;
+		scale: 0.8;
+		margin-top: 4px;
+		text-align: top;
+	}
+}
+
+
+@media (min-width: 900px) {
+	.left-work-titles-info {
+		font-size: 5rem !important;
+	}
+
+	.font-info-talk {
+		font-size: 6.5rem !important;
+	}
 }

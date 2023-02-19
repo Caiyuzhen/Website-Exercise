@@ -6,8 +6,8 @@
 
 /* 🔥用上层的盒子控制内部图片的显示范围 */
 .info-header-imgs-box {
-	width: 600px;
-	height: 400px;
+	width: 50vw;
+	height: 50vh;
 	overflow: hidden; /* ⚡️图片裁切 */
 	position: relative; /* ⚡️图片裁切 */
 	display: flex;

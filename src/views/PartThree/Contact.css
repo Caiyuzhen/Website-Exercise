@@ -124,7 +124,7 @@ video {
 
 .font-info-talk {
 	display: flex;
-	font-size: 6rem;
+	font-size: 10vw;
 	font-weight: 100;
 	text-transform: uppercase;
 	position: relative;
@@ -135,8 +135,10 @@ video {
 /* 右侧大箭头 */
 .font-info-talk::after {
 	content: '';
-	height:60px;
-	width: 60px;
+	height:4vw;
+	width: 4vw;
+	max-width: 80px;
+	max-height: 80px;
 	background-image: url('/src/imgs/arrow.svg'); /* 🔥这里的路径是相对于 index.html 的路径！！因为最终是通过模板字符串渲染出来的！ */
 	background-repeat: no-repeat;
 	position: absolute;
@@ -166,4 +168,17 @@ video {
 /* 右侧箭头的移动 */
 .font-info-talk:hover::after {
 	transform: translate(0px, 0px);
+}
+
+
+/* 媒体查询 */
+@media (max-width: 730px) {
+	.footer-info {
+		flex-direction: column;
+		gap: 24px;
+	}
+
+	.footer-info-right {
+		align-items: flex-start !important;
+	}
 }

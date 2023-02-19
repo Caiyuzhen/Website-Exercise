@@ -34,7 +34,8 @@
 
 /* 左侧标题 */
 .left-work-titles-info {
-	font-size: 3.5rem;
+	font-size: 7vw;
+	max-height: 
 	font-weight: 200;
 	transition: opacity 0.3s ease;
 	z-index: 5; 
@@ -59,7 +60,7 @@
 .text-move { /* ⚡️⚡️⚡️⚡️⚡️⚡️ span 是行内元素, 不能设置宽跟高！但是由于【父级】设置为了【flex】, 所以它能生效！！ */
 	min-width: 100%; /* 🔥🔥🔥要移动的元素的最小宽度 = 父级宽度!! */
 	width: fit-content; /* 🔥🔥🔥要移动的元素的宽度【适配内容的宽度】!! */
-	font-size: 3.5rem;
+	font-size: 7vw;
 	position: absolute; /* 🔥🔥🔥绝对定位才能跟随鼠标, 同时把父元素改成 flex ！ */
 	right: 0;
 	white-space: nowrap;/* 禁止换行 */
@@ -94,8 +95,10 @@
 
 /* 🌟圆形图片 */
 .circle-img-container {
-	width: 100px;
-	height: 100px;
+	width: 15vw;
+	height: 15vw;
+	max-width: 120px;
+	max-height: 120px;
 	border-radius: 100%;
 	overflow: hidden;
 	position: absolute;/* 🔥绝对定位才能跟随鼠标, 控制父元素 */
