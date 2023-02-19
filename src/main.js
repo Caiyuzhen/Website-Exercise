@@ -15,7 +15,7 @@ import selectedWork from './controllers/selectedWorks.js'
 		// 引入 Controller 层
 		selectedWork()
 		
-		// 初始化, 在拉伸的时候不会影响到画布内的元素比例
+		// 初始化 Canvas, 在拉伸的时候不会影响到画布内的元素比例
 		cursorInit()
 	}
 

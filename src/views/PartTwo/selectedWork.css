@@ -112,3 +112,11 @@
 .circle-img-container > img {
 	width: 160%; /* 🔥放大图片 */
 }
+
+/* 媒体查询 */
+
+@media (min-width: 900px) {
+	.text-move {
+		font-size: 5rem !important;
+	}
+}

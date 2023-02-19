@@ -12,37 +12,44 @@ const worksData = [
 	{
 	  title: 'Recongroup',
 	  subTitle: 'Corporate Design / Webdesign & Development',
-	  imgUrl: './imgs/project_01.jpg'
+	  imgUrl: './imgs/project_01.jpg',
+	  url: './page/moreWork/'
 	},
 	{
 	  title: 'Glassland',
 	  subTitle: 'Webdesign & Development',
-	  imgUrl: './imgs/project_02.jpg'
+	  imgUrl: './imgs/project_02.jpg',
+	  url: './page/moreWork/'
 	},
 	{
 	  title: 'PEFC',
 	  subTitle: 'Graphic Design / Animations / SM',
-	  imgUrl: './imgs/project_03.jpg'
+	  imgUrl: './imgs/project_03.jpg',
+	  url: './page/moreWork/'
 	},
 	{
 	  title: 'Biosphere Lab Lungau',
 	  subTitle: 'Corporate Design / Webdesign & Development / Social Media / Newsletter',
-	  imgUrl: './imgs/project_04.jpg'
+	  imgUrl: './imgs/project_04.jpg',
+	  url: './page/moreWork/'
 	},
 	{
 	  title: 'ZIID',
 	  subTitle: 'Corporate Design / Webdesign / Graphic Design / Newsletter ',
-	  imgUrl: './imgs/project_05.jpg'
+	  imgUrl: './imgs/project_05.jpg',
+	  url: './page/moreWork/'
 	},
 	{
 	  title: 'Hotel Gambswirt',
 	  subTitle: 'Webdesign / Social Media / Photography',
-	  imgUrl: './imgs/project_06.jpg'
+	  imgUrl: './imgs/project_06.jpg',
+	  url: './page/moreWork/'
 	},
 	{
 	  title: 'More works',
 	  subTitle: 'More works & photography',
-	  imgUrl: './imgs/project_07.jpg'
+	  imgUrl: './imgs/project_07.jpg',
+	  url: './page/moreWork/'
 	},
   ]
 
@@ -58,7 +65,7 @@ const selectWorktemp = `
 			${
 				// 🔥🔥等文档加载完毕, DOM 渲染完后后再执行, 不然 WorkList 里边取不到 .works-text-container 这个元素！！！
 				document.addEventListener('DOMContentLoaded', function() {
-					WorkList.init(worksData)
+					WorkList.init(worksData)//👈👈把数据传入 【类】 里边去动态的创建 work 列表
 				})
 			}
 		</div>

@@ -13,7 +13,7 @@ export default class WorkList {
 					
 			<div class="all-work-text-box"> <!-- 这一层用来裁切元素 -->
 				<!-- 左侧主目录, 🌟🌟数字在 css 内的【伪元素】去自动生成！！ -->
-				<span class="left-work-titles-info">${workData.title}</span>
+				<a href="${workData.url}" class="left-work-titles-info">${workData.title}</a>
 
 				<!-- 跑马灯文字 -->
 				<span class="text-move">${workData.subTitle}</span>
