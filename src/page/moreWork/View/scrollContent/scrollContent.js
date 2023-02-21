@@ -57,17 +57,22 @@ const worksData = [
 
 
 
+// 🔥从类中获得拼接好的 DOM HTML！！再传入下面的模板字符串！
+const cardHtml = CreateWorkCard.init(worksData) //🔥🔥🔥生成 card DOM HTML, 然后再嵌入回 Temp 内！！
+// console.log(cardHtml)
 
 const scrollContentTemp = `
 	<div class="scroll-card-container">
-		<!-- 🔥🔥调用 init 【原型方法】并传入数据！ -->
-		${
-			document.addEventListener('DOMContentLoaded', () => {
-				CreateWorkCard.init(worksData)
-			})
-		}
-	</div>
-`
+		<div class="scroll-content">
+			<div class="block project-cards-block">
+				${cardHtml}
+			</div>
+		</div>
+	</div>`
+
+
+
+
 
 export default function scrollContentArea () {
 	return scrollContentTemp

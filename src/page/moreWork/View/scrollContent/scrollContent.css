@@ -1,0 +1,35 @@
+.block{
+	height: 100vh;
+	flex-shrink: 0; 
+	/* border: 1px solid red; */
+}
+
+.scroll-content{
+	display: flex;
+	/* flex-direction: row; */
+	/* border: 2px solid green; */
+}
+
+.project-cards-block{
+	display: flex;
+	/* flex-direction: row; */
+	padding-left: 20%;
+	align-items: center;
+	gap: 100px;
+}
+
+.project-card {
+	display: flex;
+	flex-direction: column;
+  	gap: 10px;
+}
+
+.project-card-title {
+	font-size: 2rem;
+  	width: 300px;
+  	/* display: block; */
+}
+
+.project-card > img {
+	width: 200px;
+}
