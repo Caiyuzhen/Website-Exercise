@@ -13,13 +13,13 @@ const worksData = [
 	  title: 'Recongroup',
 	  subTitle: 'Corporate Design / Webdesign & Development',
 	  imgUrl: './imgs/project_01.jpg',
-	  url: './page/moreWork/'
+	  url: 'src/page/moreWork/index.html'
 	},
 	{
 	  title: 'Glassland',
 	  subTitle: 'Webdesign & Development',
 	  imgUrl: './imgs/project_02.jpg',
-	  url: './page/moreWork/'
+	  url: 'src/page/moreWork/index.html'
 	},
 	{
 	  title: 'PEFC',
@@ -31,27 +31,27 @@ const worksData = [
 	  title: 'Biosphere Lab Lungau',
 	  subTitle: 'Corporate Design / Webdesign & Development / Social Media / Newsletter',
 	  imgUrl: './imgs/project_04.jpg',
-	  url: './page/moreWork/'
+	  url: 'src/page/moreWork/index.html'
 	},
 	{
 	  title: 'ZIID',
 	  subTitle: 'Corporate Design / Webdesign / Graphic Design / Newsletter ',
 	  imgUrl: './imgs/project_05.jpg',
-	  url: './page/moreWork/'
+	  url: 'src/page/moreWork/index.html'
 	},
 	{
 	  title: 'Hotel Gambswirt',
 	  subTitle: 'Webdesign / Social Media / Photography',
 	  imgUrl: './imgs/project_06.jpg',
-	  url: './page/moreWork/'
+	  url: 'src/page/moreWork/index.html'
 	},
 	{
 	  title: 'More works',
 	  subTitle: 'More works & photography',
 	  imgUrl: './imgs/project_07.jpg',
-	  url: './page/moreWork/'
+	  url: 'src/page/moreWork/index.html'
 	},
-  ]
+]
 
 
 

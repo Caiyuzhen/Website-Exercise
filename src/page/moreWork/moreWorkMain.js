@@ -1,5 +1,7 @@
-import { cursorInit } from '../components/Cursor/cursor.js'
-import moreWorkIndexView from '/src/page/View/moreWorkIndexView.js'
+import { cursorInit } from '../../components/Cursor/cursor.js'
+import IndexView from './View/IndexView.js'
+
+
 
 // 渲染根页面
 ((doc) => {
@@ -8,7 +10,7 @@ import moreWorkIndexView from '/src/page/View/moreWorkIndexView.js'
 	// 渲染 moreWork 页面
 	const init = () => {
 		// 渲染 view
-		oAppContainer.innerHTML = moreWorkIndexView()
+		oAppContainer.innerHTML = IndexView()
 
 		cursorInit()
 	}
