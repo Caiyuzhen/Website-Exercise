@@ -13,7 +13,7 @@
 	/* border: 2px solid green; */
 }
 
-.project-cards-block{
+.project-cards-block {
 	display: flex;
 	/* flex-direction: row; */
 	padding-left: 20%;
@@ -69,11 +69,21 @@
 
 /* 第二部分内容滚动 _________________________________________ */
 .personal-text {
+	width: 500px;
 	font-weight: 600;
 	font-size: 200px;
 	line-height: 1;
 	text-transform: uppercase;
 	padding: 0 80px;
+	psoition: relative;
+}
+
+.text-one {
+	position: absolute;
+}
+
+.text-two {
+	position: absolute;
 }
 
 
@@ -81,3 +91,15 @@
 .photo-card > img{
 	width: 800px;
 }
+
+
+@media (max-width: 480px) {
+	.scroll-content{
+		flex-direction: column;
+	}
+
+	.block {
+		flex-direction: column;
+	}
+}
+

@@ -1,5 +1,5 @@
 const footerTemp = `
-	<div class="header">footerArea</div>
+	<div class="footer-text">RECONGROUP</div>
 `
 
 export default function footerArea () {

@@ -19,7 +19,6 @@ export default class WorkList {
 					<span class="text-move">${workData.subTitle}</span>
 				</div>
 
-
 				<!-- 图片 -->
 				<div class="circle-img-container">
 					<img src="${workData.imgUrl}" alt="">

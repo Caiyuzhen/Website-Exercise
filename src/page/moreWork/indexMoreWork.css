@@ -3,3 +3,9 @@ body{
 	/* overflow-x: hidden; */
 	transition: background-color 0.3s ease;
 }
+
+
+/* morWork 滚动到最后的效果 */
+.dark {
+	background-color: black;
+}
