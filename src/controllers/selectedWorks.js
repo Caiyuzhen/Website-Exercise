@@ -1,3 +1,6 @@
+import { gsap } from '../../../../../src/libs/GSAP/src/index.js'//核心库
+
+
 // 👀控制 hover Work 列表的效果
 export default function selectedWork() {
 

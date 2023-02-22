@@ -15,22 +15,34 @@ export default class CreateWorkCard {
 	//动态的生成 html DOM 的模板字符串
 	createWorkTemp (cardData) {
 		const htmlText = `
-			<div class="project-card">
+			<div class="project-card-wrapper">
+
 				<span class="project-card-title">${cardData.title}</span>
+
 				<img src="${cardData.imgUrl}" alt="">
+
 				<div class="project-info-container">
 					<div class="info-row">
 						<span class="info-name">Service</span>
 						<span class="info-detail">${cardData.services}</span>
 					</div>
+
+					<span class="border"></span>
+
 					<div class="info-row">
 						<span class="info-name">Domain</span>
 						<span class="info-detail">${cardData.domain}</span>
 					</div>
+
+					<span class="border"></span>
+
 					<div class="info-row">
 						<span class="info-name">For</span>
 						<span class="info-detail">${cardData.for}</span>
 					</div>
+
+					<span class="border"></span>
+
 					<div class="info-row">
 						<span class="info-name">Finished</span>
 						<span class="info-detail">${cardData.finished}</span>
