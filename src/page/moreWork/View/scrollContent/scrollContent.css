@@ -94,12 +94,36 @@
 
 
 @media (max-width: 480px) {
+	.header-top {
+		height: 80px;
+	}
+
 	.scroll-content{
 		flex-direction: column;
 	}
 
 	.block {
 		flex-direction: column;
+		height: auto;
+	}
+
+	.project-cards-block {
+		padding-left: 0px;
+	}
+	
+	.personal-text {
+		font-size: 3rem;
+		width: 100%;
+		padding-right: 0px;
+		padding-left: 0px;
+	}
+
+	.photo-card > img{
+		width: 200px;
+	}
+
+	.footer-text {
+		font-size: 1.5rem !important;
 	}
 }
 

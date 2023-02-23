@@ -47,3 +47,15 @@
 .footer-text:hover::after {
 	transform: scaleX(-1) translate(-8px, 0px);
 }
+
+
+@media (max-width: 480px) {
+	.footer-text {
+		padding-right: 0px;
+	}
+
+	.part-three {
+		width: 100%;
+	}
+
+}

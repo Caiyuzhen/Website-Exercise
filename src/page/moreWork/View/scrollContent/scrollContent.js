@@ -79,8 +79,9 @@ document.addEventListener('DOMContentLoaded', function () {
 	let scrollView = document.querySelector('.scroll-content').offsetWidth
 	console.log(scrollView)
 
-	
-	gsap.to('.scroll-content', { //⚡️ to 为要联动的元素
+
+	//scrollContentTragger 是 ScrollTrigger 的实例
+	const contentTrigger = gsap.to('.scroll-content', { //⚡️ to 为要联动的元素
 		x: -allWidth + scrollView,
 		// ease: 'none',//取消缓动
 		scrollTrigger: { //🍺🍺🍺 核心！！！
@@ -100,22 +101,68 @@ document.addEventListener('DOMContentLoaded', function () {
 		}
 	})
 
+	//访问 ScrollTrigger 的实例属性
+	console.log(contentTrigger.scrollTrigger) 
+	
+
 
 	// 🌟🌟🌟大文字视差效果 ——————————————————————————————————————————————————————————————————————
 	let moveArea = document.querySelector('.part-one').getBoundingClientRect().width - innerWidth //视差范围
 	console.log(moveArea)
 
-	gsap.to('.text-two',{//⚡️ to 为要联动的元素
+	const fontTrigger = gsap.to('.text-two',{//⚡️ to 为要联动的元素
 		x: -200,
 		// ease: 'none',
 		scrollTrigger: {
 			trigger: '.scroll-content', //🚀🚀 起始点
 			scrub: 1,
+			// 👇👀控制范围！
 			start: moveArea + (innerWidth / 4),//🚀🚀距离起始点多远之后才触发【联动效果】,相当于【向左偏移量】, (innerWidth / 4) 表示再露出一点再改变, 根据网站窗口的 1 / 4
 			end: '+=' + innerWidth //🔥位移多远才结束【联动效果】
 		}
 	})
+
+	//访问 ScrollTrigger 的实例属性
+	console.log(fontTrigger.scrollTrigger) 
+	
+
+	// 🔥🔥🔥判断是否是移动端！
+	if(innerWidth <= 480) {
+		contentTrigger.scrollTrigger.disable() //🔥🔥🔥禁用滚动效果
+		fontTrigger.scrollTrigger.disable() //🔥🔥🔥禁用滚动效果
+	}
+
+
+	window.addEventListener('resize', () => {
+		// 移动端就不显示！
+		if(innerWidth <= 480) {
+			contentTrigger.scrollTrigger.disable() //🔥🔥🔥禁用滚动效果
+			fontTrigger.scrollTrigger.disable() //🔥🔥🔥禁用滚动效果
+		} else {
+			contentTrigger.scrollTrigger.enable() //🔥🔥🔥启用滚动效果
+			fontTrigger.scrollTrigger.enable() //🔥🔥🔥启用滚动效果
+		}
+	})
+
+
+	// ⚡️⚡️滚动到页面底部同样也要【触发让 footer 变黑的效果】
+	const scroll = ScrollTrigger.create({
+		// 👀滚动到底部才触发
+		trigger: 'body',
+		//          👇记得有空格！！
+		end: 'bottom ' + `${innerHeight + 200}px`,
+		onLeave: () => {
+			console.log('到达最底部了')
+			document.body.style.backgroundColor = '#000000' 
+		},
+		onEnterBack: () => {
+			console.log('向回滚动了')
+			document.body.style.backgroundColor = 'white' 
+		}
+	})
 })
+
+
 
 
 

@@ -9,3 +9,11 @@ body{
 .dark {
 	background-color: black;
 }
+
+
+
+/* 🔥🔥鼠标划出的选区的样式 */
+::selection {
+	background-color: #b3ff76;
+	color: #006581;
+}
