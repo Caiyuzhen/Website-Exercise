@@ -1,3 +1,8 @@
+/* 添加字体 (他人电脑会先寻找代码包、然后找他人电脑的本地字体、最后去用系统字体)*/
+@font-face {
+	font-family: 'RammettoOne';
+	src: url('../../font/RammettoOne-Regular.ttf');
+}
 
 .info-header-nav {
 	display: flex;
@@ -31,6 +36,7 @@
 }
 
 .info-header-nav-title {
+	font-family: 'RammettoOne';
 	/* font-size: 2rem;
 	font-weight: 200; */
 }
