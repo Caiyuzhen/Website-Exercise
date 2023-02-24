@@ -12,43 +12,43 @@ const worksData = [
 	{
 	  title: 'Recongroup',
 	  subTitle: 'Corporate Design / Webdesign & Development',
-	  imgUrl: './imgs/project_01.jpg',
+	  imgUrl: 'src/imgs/project_01.jpg',
 	  url: '/src/page/moreWork/index.html'
 	},
 	{
 	  title: 'Glassland',
 	  subTitle: 'Webdesign & Development',
-	  imgUrl: './imgs/project_02.jpg',
+	  imgUrl: 'src/imgs/project_02.jpg',
 	  url: '/src/page/moreWork/index.html'
 	},
 	{
 	  title: 'PEFC',
 	  subTitle: 'Graphic Design / Animations / SM',
-	  imgUrl: './imgs/project_03.jpg',
+	  imgUrl: 'src/imgs/project_03.jpg',
 	  url: '/src/page/moreWork/index.html'
 	},
 	{
 	  title: 'Biosphere Lab Lungau',
 	  subTitle: 'Corporate Design / Webdesign & Development / Social Media / Newsletter',
-	  imgUrl: './imgs/project_04.jpg',
+	  imgUrl: 'src/imgs/project_04.jpg',
 	  url: '/src/page/moreWork/index.html'
 	},
 	{
 	  title: 'ZIID',
 	  subTitle: 'Corporate Design / Webdesign / Graphic Design / Newsletter ',
-	  imgUrl: './imgs/project_05.jpg',
+	  imgUrl: 'src/imgs/project_05.jpg',
 	  url: '/src/page/moreWork/index.html'
 	},
 	{
 	  title: 'Hotel Gambswirt',
 	  subTitle: 'Webdesign / Social Media / Photography',
-	  imgUrl: './imgs/project_06.jpg',
+	  imgUrl: 'src/imgs/project_06.jpg',
 	  url: '/src/page/moreWork/index.html'
 	},
 	{
 	  title: 'More works',
 	  subTitle: 'More works & photography',
-	  imgUrl: './imgs/project_07.jpg',
+	  imgUrl: 'src/imgs/project_07.jpg',
 	  url: '/src/page/moreWork/index.html'
 	},
 ]

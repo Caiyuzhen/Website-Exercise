@@ -1,7 +1,7 @@
-const avatarImg_01 = './imgs/avatar-01.jpg' //🔥路径需要从最外侧调用！
-const avatarImg_02 = './imgs/avatar-02.jpg' //🔥路径需要从最外侧调用！
-const circleText = './imgs/circle-04.svg' //🔥路径需要从最外侧调用！
-const arrowIcon = './imgs/arrow.svg' //🔥路径需要从最外侧调用！
+const avatarImg_01 = 'src/imgs/avatar-01.jpg' //🔥路径需要从最外侧调用！
+const avatarImg_02 = 'src//imgs/avatar-02.jpg' //🔥路径需要从最外侧调用！
+const circleText = 'src//imgs/circle-04.svg' //🔥路径需要从最外侧调用！
+const arrowIcon = 'src//imgs/arrow.svg' //🔥路径需要从最外侧调用！
 
 
 const imgBox = `

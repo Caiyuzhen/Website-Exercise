@@ -1,6 +1,6 @@
 // 引入图片
-const circleBadgeNormal = './imgs/cssda-special-kudos-normal.png' //🔥路径需要从最外侧调用！
-const circleBadgeHover = './imgs/cssda-special-kudos-hover.png' //🔥路径需要从最外侧调用！
+const circleBadgeNormal = 'src/imgs/cssda-special-kudos-normal.png' //🔥路径需要从最外侧调用！
+const circleBadgeHover = 'src/imgs/cssda-special-kudos-hover.png' //🔥路径需要从最外侧调用！
 
 
 // 切换主题（切换按钮样式用 CSS 写的, 事件则是加上 .old-school 类名便可以切换）

@@ -139,7 +139,7 @@ video {
 	width: 4vw;
 	max-width: 80px;
 	max-height: 80px;
-	background-image: url('/src/imgs/arrow.svg'); /* 🔥这里的路径是相对于 index.html 的路径！！因为最终是通过模板字符串渲染出来的！ */
+	background-image: url('../../imgs/arrow.svg'); /* 🔥这里的路径是相对于 index.html 的路径！！因为最终是通过模板字符串渲染出来的！ */
 	background-repeat: no-repeat;
 	position: absolute;
 	top: 0;

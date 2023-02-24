@@ -1,4 +1,4 @@
-const lifeVideo = './video/things.mp4'
+const lifeVideo = 'src/video/things.mp4'
 
 // 点击切换视频的开关
 export function changeVideo () {
