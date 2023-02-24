@@ -38,51 +38,53 @@ const indexViewTemp = `
 	</div>
 `
 
+console.log('屏幕倍数:', devicePixelRatio)
+
 
 // 🔥🔥鼠标选区效果
-let startPoint = { x: 0, y: 0 };
+// let startPoint = { x: 0, y: 0 };
 
-document.addEventListener('pointerdown', (event) => {
-  startPoint.x = event.clientX;
-  startPoint.y = event.clientY;
-});
+// document.addEventListener('pointerdown', (event) => {
+//   startPoint.x = event.clientX;
+//   startPoint.y = event.clientY;
+// });
 
-let selectBox = null;
+// let selectBox = null;
 
-document.addEventListener('pointermove', (event) => {
-  const currentPoint = { x: event.clientX, y: event.clientY };
-  const x = Math.min(startPoint.x, currentPoint.x);
-  const y = Math.min(startPoint.y, currentPoint.y);
-  const width = Math.abs(startPoint.x - currentPoint.x);
-  const height = Math.abs(startPoint.y - currentPoint.y);
+// document.addEventListener('pointermove', (event) => {
+//   const currentPoint = { x: event.clientX, y: event.clientY };
+//   const x = Math.min(startPoint.x, currentPoint.x);
+//   const y = Math.min(startPoint.y, currentPoint.y);
+//   const width = Math.abs(startPoint.x - currentPoint.x);
+//   const height = Math.abs(startPoint.y - currentPoint.y);
 
-  if (!selectBox) {
-    selectBox = document.createElement('div');
-    selectBox.style.position = 'absolute';
-    selectBox.style.border = '1px solid #000';
-	selectBox.style.background = 'rgba(0,0,0,0.1)';
-    document.body.appendChild(selectBox);
-  }
+//   if (!selectBox) {
+//     selectBox = document.createElement('div');
+//     selectBox.style.position = 'absolute';
+//     selectBox.style.border = '1px solid #000';
+// 	selectBox.style.background = 'rgba(0,0,0,0.1)';
+//     document.body.appendChild(selectBox);
+//   }
 
-  selectBox.style.left = x + 'px';
-  selectBox.style.top = y + 'px';
-  selectBox.style.width = width + 'px';
-  selectBox.style.height = height + 'px';
-});
+//   selectBox.style.left = x + 'px';
+//   selectBox.style.top = y + 'px';
+//   selectBox.style.width = width + 'px';
+//   selectBox.style.height = height + 'px';
+// });
 
-document.addEventListener('pointerup', () => {
-	if (selectBox) {
-	  const elements = document.elementsFromPoint(
-		startPoint.x,
-		startPoint.y
-	  ).filter((el) => selectBox.contains(el));
+// document.addEventListener('pointerup', () => {
+// 	if (selectBox) {
+// 	  const elements = document.elementsFromPoint(
+// 		startPoint.x,
+// 		startPoint.y
+// 	  ).filter((el) => selectBox.contains(el));
   
-	  console.log(elements);
+// 	  console.log(elements);
   
-	  document.body.removeChild(selectBox);
-	  selectBox = null;
-	}
-});
+// 	  document.body.removeChild(selectBox);
+// 	  selectBox = null;
+// 	}
+// });
 
   
 
